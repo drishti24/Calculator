@@ -3,9 +3,14 @@ function display(val){
 }
 
 function solve(){
-    var a = document.getElementById("result").value
-    var b = eval(a)
-    document.getElementById("result").value = b;
+    try{
+        var a = document.getElementById("result").value;
+        var b = eval(a);
+        document.getElementById("result").value = b;
+    }
+    catch(err){
+        document.getElementById("result").value = "Syntax Error";
+    }
 }
 
 function clr(){
